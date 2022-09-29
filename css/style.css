@@ -1,3 +1,10 @@
+:root {
+    --color-principal: rgb(199, 31, 31);
+    --color-secundario: rgb(201, 76, 76);
+    --negro: #111;
+    --blanco: #eee;
+}
+
 html {
     box-sizing: border-box;
 }
