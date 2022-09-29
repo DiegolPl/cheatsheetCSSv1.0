@@ -1,8 +1,8 @@
 :root {
     --color-principal: rgb(199, 31, 31);
-    --color-secundario: rgb(201, 76, 76);
+    --color-secundario: rgba(226, 86, 62, 0.644);
     --negro: #111;
-    --blanco: #eee;
+    --blanco: #fff;
 }
 
 html {
@@ -15,9 +15,59 @@ html {
     box-sizing: inherit;
     text-decoration: none;
     color: inherit;
+    font-family: 'Roboto', sans-serif;
 }
 
 img, video {
     max-width: 100%;
     width: 100%;
+}
+
+body {
+    min-height: 100vh;
+}
+
+main.container {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+h1.title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-principal);
+}
+
+table.table,th,td {
+    border: 1px solid var(--color-principal);
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table.table tr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+thead.header-table th {
+    padding: .2rem 0;
+    color: var(--blanco);
+    background-color: var(--color-principal);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+tbody.body-table h3.property {
+    padding: .3rem;
+    font-size: 1rem;
+    background-color: var(--color-secundario);
+    color: var(--blanco);
+}
+
+tbody.body-table p.value, 
+tbody.body-table p.description, 
+tbody.body-table .more-description {
+    font-size: .9rem;
+    padding: .3rem;
 }
