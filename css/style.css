@@ -71,3 +71,17 @@ tbody.body-table .more-description {
     font-size: .9rem;
     padding: .3rem;
 }
+
+footer.footer {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    background-color: var(--color-principal);
+    color: var(--blanco);
+}
+
+footer.footer a {
+    text-decoration: underline;
+}
