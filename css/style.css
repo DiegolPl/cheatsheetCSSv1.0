@@ -85,3 +85,21 @@ footer.footer {
 footer.footer a {
     text-decoration: underline;
 }
+
+@media screen and (min-width: 768px){
+    html {
+        font-size: 90%;
+    }
+
+    main.container {
+        width: 85%;
+    }
+
+    tbody.body-table td {
+        padding-bottom: .5rem;
+    }
+
+    i {
+        font-weight: 500;
+    }
+}
