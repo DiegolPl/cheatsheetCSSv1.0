@@ -23,7 +23,7 @@
             <tbody class="body-table">
                 <tr>
                     <td>
-                        <h3 class="propertie">background</h3>
+                        <h3 class="property">background</h3>
                         <p class="value">Cualquier combinación de los valores para: <i>background-attachment, background-color, background-image, background-repeat y/o background-position</i> o <i>inherit</i></p>
                     </td>
                     <td>
@@ -33,7 +33,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3 class="propertie">background-attachment</h3>
+                        <h3 class="property">background-attachment</h3>
                         <p class="value"><i>scroll, fixed o inherit</i></p>
                     </td>
                     <td>
@@ -43,16 +43,519 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3 class="propertie">background-color</h3>
+                        <h3 class="property">background-color</h3>
                         <p class="value">Cualquier color, <i>transparent o inherit</i></p>
                     </td>
                     <td>
-                        <p class="description">Para cambiar el color de fondo de un elemento</p>
+                        <p class="description">Para establecer un color de fondo a un elemento</p>
                         <p class="more-description">El valor inicial es <i>transparent</i>; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">background-image</h3>
+                        <p class="value">URL, <i>none o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer una imagen de fondo a un elemento</p>
+                        <p class="more-description">El valor inicial es <i>none</i>; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">background-position</h3>
+                        <p class="value">Toma 1 o 2 valores. <br> El primero puede ser <i>%, unidad de medida, top, center o bottom</i>. <br> El segundo puede ser <i>%, unidad de medida, left, right o center</i>. <br> O puede ser <i>inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer la posición física de un background-image específico</p>
+                        <p class="more-description">El valor inicial es <i>0% 0%</i>; si se introduce 1 valor este será para la posición horizontal, la posición vertical tomará como valor 50% (o center); no se hereda; cuando utilizamos % nos referimos al tamaño de la propia caja</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">background-repeat</h3>
+                        <p class="value">Puede ser <i>repeat, repeat-x, repeat-y, no-repeat o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer si debe repetirse una imagen para rellenar el espacio, y cómo debe hacerlo</p>
+                        <p class="more-description">El valor inicial es <i>repeat</i>; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">border</h3>
+                        <p class="value">Puede ser cualquier combinación de los valores de <i>border-width, border-style, y/o border-color, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para definir todos los aspectos del borde de un elemento</p>
+                        <p class="more-description">El valor inicial es depende de propiedades individuales; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">border-color</h3>
+                        <p class="value">Puede ser de 1 a 4 colores, <i>transparent o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para definir los color de los bordes de un elemento</p>
+                        <p class="more-description">El valor inicial es el valor de la propiedad color; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">border-spacing</h3>
+                        <p class="value">Puede sero 1 o 2 medidas de largo o <i>inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para definir lel espacio entre los bordes de una tabla</p>
+                        <p class="more-description">El valor inicial es 0; debería ser sólo aplicado a los elementos de una tabla; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">border-style</h3>
+                        <p class="value">Puede ser de 1 a 4 de los siguientes valores: <i>none, dotted, dashed, solid, double, groove, ridge, inset, outset, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para definir sólo el estilo de un borde o uno o más lados de un elemento</p>
+                        <p class="more-description">El valor inicial es <i>none</i>; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">border-* (*: top, right, bottom, left)</h3>
+                        <p class="value">Cualquier combinación de valores de: <i>border-width, border-style y/o border-color (1 de cada uno), o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para definir las 3 propiedades de un único borde a la vez </p>
+                        <p class="more-description">El valor inicial depende de valores individuales; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">border-*-color (*: top, right, bottom, left)</h3>
+                        <p class="value">Puede ser un color o <i>inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para definir el color de un único borde de un elemento </p>
+                        <p class="more-description">El valor inicial es el valor de la propiedad color; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">border-*-style (*: top, right, bottom, left)</h3>
+                        <p class="value">Puede ser de 1 de los siguientes valores: <i>none, dotted, dashed, solid, double, groove, ridge, inset, outset, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para definir el estilo de un único borde de un elemento </p>
+                        <p class="more-description">El valor inicial es el valor de la propiedad color; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">border-*-width (*: top, right, bottom, left)</h3>
+                        <p class="value">Puede ser de 1 de los siguientes valores: <i>thin, medium, thick o una medida de largo</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para definir el ancho de un único borde de un elemento </p>
+                        <p class="more-description">El valor inicial es <i>medium</i>; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">border-width</h3>
+                        <p class="value">Puede ser de 1 a 4 valores de los siguientes valores: <i>thin, medium, thick o una medida de largo</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para definir el ancho de 1 o más bordes de un elemento </p>
+                        <p class="more-description">El valor inicial es <i>medium</i>; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">bottom</h3>
+                        <p class="value">Puede ser: <i>%, una medida de largo, auto o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para definir la distancia que un elemento deberia alejarse del borde de abajo de su elemento padre</p>
+                        <p class="more-description">El valor inicial es <i>auto</i>; cuando usa % toma como referencia el alto del bloque contenedor</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">clear</h3>
+                        <p class="value">Puede ser: <i>none, left, right, both o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para evitar que los elementos floten en uno o ambos lados de un elemento</p>
+                        <p class="more-description">El valor inicial es <i>none</i>; deberia sólo ser aplicado a elementos de tipo bloque; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">color</h3>
+                        <p class="value">Puede ser un color o <i>inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer el color de primer plano de un elemento o la fuente</p>
+                        <p class="more-description">El valor inicial es <i>inherit</i>; deberia sólo ser aplicado a elementos de tipo bloque; se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">cursor</h3>
+                        <p class="value">Puede ser: <i>auto, crosshair, default, pointer, move, e-resize, ne-resize, nw-resize, n-resize, se-resize, sw-resize, s-resize, w-resize, text, wait, help, a URL, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer la forma del cursor</p>
+                        <p class="more-description">El valor inicial es <i>auto</i>; se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">display</h3>
+                        <p class="value">Puede ser: <i>inline, block, list-item, none, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer si un elemento debe ser mostrado y cómo hacerlo</p>
+                        <p class="more-description">El valor inicial es <i>inline/block</i>; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">float</h3>
+                        <p class="value">Puede ser: <i>inline, block, list-item, none, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para determinar en qué lado de un elemento pueden flotar otros elementos</p>
+                        <p class="more-description">El valor inicial es <i>none</i>; no debería ser aplicado a elementos posicionados o contenido generado; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">font-family</h3>
+                        <p class="value">Puede ser 1 o más nombres de fuentes, poniendo al último una genérica, o <i> inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para elegir la fuente (family) de nuestro texto</p>
+                        <p class="more-description">El valor inicial depende del navegador; se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">font-size</h3>
+                        <p class="value">Puede ser <i>una medida de longitud (relativa o absoluta), % o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer el tamaño de nuestro texto</p>
+                        <p class="more-description">El valor inicial es <i>medium</i>; se hereda; si utilizamos porcentajes este se tomará con respecto al tamaño de la fuente del elemento padre</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">font-style</h3>
+                        <p class="value">Puede ser <i>normal, italic, oblique, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para convertir el texto a italic</p>
+                        <p class="more-description">El valor inicial es <i>normal</i>; se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">font-variant</h3>
+                        <p class="value">Puede ser <i>normal, small-caps, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para convertir el texto en <span style="font-variant: small-caps;">Small Caps</span></p>
+                        <p class="more-description">El valor inicial es <i>normal</i>; se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">font-weight</h3>
+                        <p class="value">Puede ser: <i> normal, bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para aplicar, remover y ajustar el formato de negrita del texto</p>
+                        <p class="more-description">El valor inicial es <i>normal</i>; se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">height</h3>
+                        <p class="value">Puede ser: <i> una medida de longitud, %, auto, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para aplicar una altura a un elemento</p>
+                        <p class="more-description">El valor inicial es <i>auto</i>; debería ser aplicado a todos los elementos excepto los elementos en línea, las columnas de las tablas y a los grupos de columnas; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">left</h3>
+                        <p class="value">Puede ser: <i> una medida de longitud, %, auto, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer la distancia que un elemento debería estar alejado del borde izquierdo de su elemento padre</p>
+                        <p class="more-description">El valor inicial es <i>auto</i>; debería ser aplicado sólo a los elementos posicionados; no se hereda; si utilizamos porcentajes este se tomará con respecto al ancho del elemento que lo contiene</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">letter-spacing</h3>
+                        <p class="value">Puede ser: <i> una medida de longitud, normal, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer la cantidad de espacios entre los caracteres del texto</p>
+                        <p class="more-description">El valor inicial es <i>normal</i>; se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">line-height</h3>
+                        <p class="value">Puede ser: <i> una medida de longitud, un número, %, normal, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer la cantidad de espacios entre las líneas del texto</p>
+                        <p class="more-description">El valor inicial es <i>normal</i>; se hereda; si utilizamos porcentajes este se tomará con respecto al tamaño de la fuente del mismo elemento</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">list-style</h3>
+                        <p class="value">Cualquier combinación de valores para: <i>list-style-type, list-style-position y/o list-style-image, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer una marca de item-list y su posición</p>
+                        <p class="more-description">El valor inicial depende de los valores iniciales de los elementos individuales; sólo se aplica a elementos de tipo lista; se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">list-style-image</h3>
+                        <p class="value">Puede ser: <i>URL, none, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer una marca de item-list personalizada para una lista</p>
+                        <p class="more-description">El valor inicial es <i>none</i>; sólo se aplica a elementos de tipo lista; sobrescribe a <i>list-style-type</i>; se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">list-style-position</h3>
+                        <p class="value">Puede ser: <i>inside, outside, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer la posición de una marca de item-list</p>
+                        <p class="more-description">El valor inicial es <i>none</i>; sólo se aplica a elementos de tipo lista; se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">list-style-type</h3>
+                        <p class="value">Puede ser: <i>disc, circle, square, decimal, lower-roman, upper-roman, lower-alpha, upper-alpha, none, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer un tipo de marca de item-list para una lista</p>
+                        <p class="more-description">El valor inicial es <i>disc</i>; sólo se aplica a elementos de tipo lista; no usar si usamos <i>list-style-image</i> (sin verificar); se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">margin</h3>
+                        <p class="value">Puede ser de 1 a 4 valores de los siguientes valores: <i> una medida de longitud, %, auto, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer la cantidad de espacio entre uno o más lados del borde de un elemento y su elemento padre o hermanos adyacentes</p>
+                        <p class="more-description">El valor inicial depende del navegador y del valor de su ancho; no se hereda; cuando usa % toma como referencia el ancho del elemento que lo contiene</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">margin-* (*: top, right, bottom, left)</h3>
+                        <p class="value">Puede ser: <i> una medida de longitud, %, auto, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer la cantidad de espacio entre uno de sus lados del borde de un elemento y su elemento padre o hermanos adyacentes</p>
+                        <p class="more-description">El valor inicial es <i>0</i>; no se hereda; cuando usa % toma como referencia el ancho del elemento que lo contiene; los valores de <i>margin-left</i> y <i>margin-right</i> pueden ser anulados si la suma del ancho y ambos márgenes es mayor al ancho del elemento padre contenedor</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">max-height, max-width</h3>
+                        <p class="value">Puede ser: <i> una medida de longitud, %, auto, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer el alto/ancho máximo de un elemento</p>
+                        <p class="more-description">El valor inicial es <i>none</i>; no se hereda; cuando usa % toma como referencia el alto/ancho del elemento que lo contiene; no debería ser aplicado a elementos inline o elementos de tabla</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">min-height, min-width</h3>
+                        <p class="value">Puede ser: <i>una medida de longitud, %, auto, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer el alto/ancho mínimo de un elemento</p>
+                        <p class="more-description">El valor inicial es <i>0</i>; no se hereda; cuando usa % toma como referencia el alto/ancho del elemento que lo contiene; no debería ser aplicado a elementos inline o elementos de tabla</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">overflow</h3>
+                        <p class="value">Puede ser: <i>visible, hidden, scroll, auto, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer como será tratado el contenido que desborda el área de contenido del elemento</p>
+                        <p class="more-description">El valor inicial es <i>visible</i>; no se hereda; debería sólo ser aplicado a elementos de tipo block</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">padding</h3>
+                        <p class="value">Puede ser de 1 a 4 valores de los siguientes valores: <i> una medida de longitud, %, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer la cantidad de espacio entre uno de sus lados del contenido de un elemento y su borde</p>
+                        <p class="more-description">El valor inicial depende del navegador; no se hereda; cuando usa % toma como referencia el ancho del elemento que lo contiene</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">padding-* (*: top, right, bottom, left)</h3>
+                        <p class="value">Puede ser: <i>una medida de longitud, %, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer la cantidad de espacio entre uno de sus lados del contenido de un elemento y su borde</p>
+                        <p class="more-description">El valor inicial es <i>0</i>; no se hereda; cuando usa % toma como referencia el ancho del elemento que lo contiene</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">position</h3>
+                        <p class="value">Puede ser: <i>static, relative, absolute, fixed, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer cómo un elemento debería ser posicionado con respecto al flujo del documento</p>
+                        <p class="more-description">El valor inicial es <i>static</i>; no se hereda; no debería ser aplicado a contenido generado</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">right</h3>
+                        <p class="value">Puede ser: <i>una medida de longitud, %, auto, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer la distancia que un elemento debería estar alejado del borde derecho de su elemento padre</p>
+                        <p class="more-description">El valor inicial es <i>auto</i>; debería ser aplicado sólo a los elementos posicionados; no se hereda; si utilizamos porcentajes este se tomará con respecto al ancho del elemento que lo contiene</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">text-align</h3>
+                        <p class="value">Puede ser: <i>left, right, center, justify, a string, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para alinear texto</p>
+                        <p class="more-description">El valor inicial depende del navegador y la dirección de escritura; se hereda; debería sólo ser aplicado a elementos de tipo block</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">text-decoration</h3>
+                        <p class="value">Cualquier combinación de: <i>underline, overline, line-through, and blink, o none, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para decorar texto</p>
+                        <p class="more-description">El valor inicial es <i>none</i>; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">text-indent</h3>
+                        <p class="value">Puede ser: <i>una medida de longitud, %, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer la cantidad de espacio que la primera línea de un párrafo debería estar indentado</p>
+                        <p class="more-description">El valor inicial es <i>0</i>; se hereda; debería sólo ser aplicado a elementos de tipo block; si utilizamos porcentajes este se tomará con respecto al ancho del elemento que lo contiene</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">text-transform</h3>
+                        <p class="value">Puede ser: <i>capitalize, uppercase, lowercase, none, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para poner en mayúscula la letra inicial de cada palabra en un texto</p>
+                        <p class="more-description">El valor inicial es <i>none</i>; se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">top</h3>
+                        <p class="value">Puede ser: <i>una medida de longitud, %, auto, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para establecer la distancia que un elemento debería estar alejado del borde de arriba de su elemento padre</p>
+                        <p class="more-description">El valor inicial es <i>auto</i>; debería ser aplicado sólo a los elementos posicionados; no se hereda; si utilizamos porcentajes este se tomará con respecto al alto del elemento que lo contiene</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">visibility</h3>
+                        <p class="value">Puede ser: <i>visible, hidden, collapse, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para ocultar o no un elemento sin afectar el flujo del documento</p>
+                        <p class="more-description">El valor inicial es <i>inherit</i>; no se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">white-space</h3>
+                        <p class="value">Puede ser: <i>normal, pre, nowrap, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para especificar como debería ser tratado el espacio en blanco</p>
+                        <p class="more-description">El valor inicial es <i>normal</i>; debería sólo ser aplicado a elementos de tipo block; se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">width</h3>
+                        <p class="value">Puede ser: <i> una medida de longitud, %, auto, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para aplicar el ancho a un elemento</p>
+                        <p class="more-description">El valor inicial es <i>auto</i>; no debería ser aplicado a los elementos inline, las filas de las tablas y a los grupos de filas; no se hereda; si utilizamos porcentajes este se tomará con respecto al ancho del elemento que lo contiene</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">word-spacing</h3>
+                        <p class="value">Puede ser: <i>normal, una medida de longitud, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para especificar la distancia entre palabras</p>
+                        <p class="more-description">El valor inicial es <i>normal</i>; se hereda</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="property">z-index</h3>
+                        <p class="value">Puede ser: <i>auto, un entero, o inherit</i></p>
+                    </td>
+                    <td>
+                        <p class="description">Para especificar la profundidad de un elemento con respecto a los elementos que se superponen</p>
+                        <p class="more-description">El valor inicial es <i>auto</i>; no se hereda; debería sólo aplicarse a elementos posicionados</p>
                     </td>
                 </tr>
             </tbody>
         </table>
     </main>
+    <footer class="footer">
+        <p>Este contenido fue adaptado de <a href="http://www.elizabethcastro.com/html/extras/cssref.html">elizabethcastro.com</a></p>
+    </footer>
 </body>
 </html>
